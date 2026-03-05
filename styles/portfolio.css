@@ -1,4 +1,4 @@
-section.gallery {
+section.portfolio {
   width: 100%;
   max-width: 80rem;
   padding: 2.5rem 2rem;
@@ -10,6 +10,11 @@ section.gallery {
 
   & header span {
     font: 500 var(--text-sm)/1.5 var(--ff-base);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
   }
 
   & img {
@@ -43,14 +48,14 @@ section.gallery {
       animation-range: 150px 350px;
     }
 
-    & > img {
+    &>img {
       height: 25rem;
       object-fit: cover;
       transition: scale 500ms;
     }
 
     &:hover {
-      & > img {
+      &>img {
         scale: 1.1;
       }
 
@@ -74,10 +79,12 @@ section.gallery {
     &:nth-child(4) {
       grid-area: D;
     }
-     &:nth-child(5) {
+
+    &:nth-child(5) {
       grid-area: E;
     }
-     &:nth-child(6) {
+
+    &:nth-child(6) {
       grid-area: F;
     }
   }
@@ -100,11 +107,9 @@ section.gallery {
     transform: translateY(100%);
     transition: transform 500ms;
 
-    background: linear-gradient(
-      to top,
-      rgb(0 0 0 / 1),
-      rgb(0 0 0 / 0.7)
-    );
+    background: linear-gradient(to top,
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.7));
 
     & a {
       font: 500 var(--text-sm)/1.5 var(--ff-base);

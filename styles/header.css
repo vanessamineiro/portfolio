@@ -44,4 +44,19 @@ header.top {
 
     border-radius: 50%;
   }
+
+  & nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    & a {
+      transition: color 350ms;
+
+      &:hover {
+        color: var(--brand-color);
+      }
+    }
+
+  }
 }

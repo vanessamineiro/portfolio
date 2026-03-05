@@ -1,23 +1,24 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --brand-color: #996DFF;
-  --snitap-sky-mid: #06B6D4;
+  --brand-color: #8b24ab;
+  /* --snitap-sky-mid: #06B6D4;
   --snitap-sky-light: #67E8F9;
   --snitap-joy-mid: #DB2777;
   --snitap-joy-light: #F472B6;
-  --snitap-leaf-mid: #16A34A;
+  --snitap-leaf-mid: #16A34A; */
+  --gradient: linear-gradient(90deg, #8b24ab, #bb2c9d, #eb584d);
 
-  /* --text: #000000; */
   --text: #FAFAFA;
-  /* --highlights: #000000; */
   --highlights: #FAFAFA;
-  /* --background: #FAFAFA; */
-  background: #121214;
+
+  --background: #121214;
 
   --ff-base: "Montserrat", sans-serif;
 
@@ -32,11 +33,13 @@ body {
   background: var(--background);
 }
 
-html, button {
+html,
+button {
   font: 500 1rem/1.5 var(--ff-base);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Syne", sans-serif;
 }
 
