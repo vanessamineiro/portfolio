@@ -9,18 +9,7 @@ header.top {
   justify-content: space-between;
 
   img {
-    width: 2rem;
-    height: 2rem;
-
-    transition: transform 500ms;
-  }
-
-  img[src*="logo"]:hover {
-    transform: rotate(90deg);
-  }
-
-  img[src*="shopping"]:hover {
-    transform: rotate(-30deg);
+    height: 1.5rem;
   }
 
   a {
