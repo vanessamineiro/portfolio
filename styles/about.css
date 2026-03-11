@@ -19,9 +19,12 @@ section.about {
   & img {
     width: 50%;
     border-radius: 2.5rem;
+  }
 
-    position: relative;
-    overflow: hidden;
+  & .content {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2.5rem;
 
     animation: image-appear linear backwards;
     animation-timeline: view();
@@ -33,15 +36,11 @@ section.about {
 
     transition: scale 500ms;
 
-    &:hover {
-      scale: 1.1;
-    }
   }
 
-  & .content {
-    margin-top: 2rem;
-    display: flex;
-    gap: 2.5rem;
+  & .content p {
+    font: 500 var(--text-sm)/1.5 var(--ff-base);
+    text-align: justify;
   }
 
 }

@@ -8,11 +8,6 @@
 
 :root {
   --brand-color: #8b24ab;
-  /* --snitap-sky-mid: #06B6D4;
-  --snitap-sky-light: #67E8F9;
-  --snitap-joy-mid: #DB2777;
-  --snitap-joy-light: #F472B6;
-  --snitap-leaf-mid: #16A34A; */
   --gradient: linear-gradient(90deg, #8b24ab, #bb2c9d, #eb584d);
 
   --text: #FAFAFA;
