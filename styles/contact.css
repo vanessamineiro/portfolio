@@ -1,10 +1,45 @@
 section.contact {
+    width: 100%;
+    max-width: 80rem;
+    padding: 2.5rem 2rem;
+    margin-inline: auto;
+
+    & header {
+        text-align: center;
+    }
+
+    & header span {
+        font: 500 var(--text-sm)/1.5 var(--ff-base);
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+    }
 
     & form {
-        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-top: 2rem;
+
+        animation: image-appear linear backwards;
+        animation-timeline: view();
+        animation-range: 100px 350px;
+
+        &[data-delay] {
+            animation-range: 150px 350px;
+        }
+
+        transition: scale 500ms;
     }
+
+    @keyframes image-appear {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+    }
+
 }
