@@ -35,6 +35,21 @@ section.contact {
         transition: scale 500ms;
     }
 
+    & button {
+        /* display: flex;
+      align-items: center;
+      gap: .75rem; */
+
+        border-radius: 5rem;
+        padding: 1.5rem 3rem;
+        background-color: var(--brand-color);
+        transition: scale 350ms;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
     @keyframes image-appear {
         from {
             opacity: 0;
