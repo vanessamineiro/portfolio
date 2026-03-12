@@ -18,6 +18,7 @@ section.contact {
     }
 
     & form {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,14 +36,46 @@ section.contact {
         transition: scale 500ms;
     }
 
+    & label,
+    & input,
+    & textarea
     & button {
-        /* display: flex;
-      align-items: center;
-      gap: .75rem; */
+        display: block;
+        width: 100%;
+    }
 
+    & label {
+        line-height: 1;
+        margin-bottom: .5rem;
+    }
+
+    & input,
+    & textarea {
+        font: inherit;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        transition: border-color, box-shadow 0.2s;
+    }
+
+    & textarea {
+        min-height: 13rem;
+        resize: vertical;
+    }
+
+    & input:hover,
+    & textarea:focus {
+        outline: none;
+        border-color: var(--brand-color);
+        box-shadow: 0 0 0 3px var(--brand-color);
+    }
+
+    & button {
         border-radius: 5rem;
         padding: 1.5rem 3rem;
         background-color: var(--brand-color);
+        color: white;
         transition: scale 350ms;
 
         &:hover {
