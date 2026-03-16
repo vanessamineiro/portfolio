@@ -18,12 +18,13 @@ section.contact {
     }
 
     & form {
-        width: 100%;
+        max-width: 700px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         margin-top: 2rem;
+        margin-inline: auto;
 
         animation: image-appear linear backwards;
         animation-timeline: view();
@@ -38,7 +39,7 @@ section.contact {
 
     & label,
     & input,
-    & textarea & button {
+    & textarea {
         display: block;
         width: 100%;
     }
@@ -85,6 +86,7 @@ section.contact {
         color: white;
         border: none;
         cursor: pointer;
+        align-self: flex-end;
         transition: scale 0.3s, box-shadow 0.3s;
 
         &:hover {
