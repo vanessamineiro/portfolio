@@ -38,8 +38,7 @@ section.contact {
 
     & label,
     & input,
-    & textarea
-    & button {
+    & textarea & button {
         display: block;
         width: 100%;
     }
@@ -47,16 +46,19 @@ section.contact {
     & label {
         line-height: 1;
         margin-bottom: .5rem;
+        color: #E1E1E6;
     }
 
     & input,
     & textarea {
-        font: inherit;
+        font: 500 var(--text-sm)/1.5 var(--ff-base);
+        color: #E1E1E6;
         padding: 0.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         border: 1px solid transparent;
         border-radius: 8px;
-        transition: border-color, box-shadow 0.2s;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        background-color: #202024;
     }
 
     & textarea {
@@ -65,21 +67,31 @@ section.contact {
     }
 
     & input:hover,
+    & input:focus,
+    & textarea:hover,
     & textarea:focus {
         outline: none;
         border-color: var(--brand-color);
-        box-shadow: 0 0 0 3px var(--brand-color);
+        -webkit-box-shadow: 0px 0px 26px 0px var(--brand-color);
+        -moz-box-shadow: 0px 0px 26px 0px var(--brand-color);
+        box-shadow: 0px 0px 26px 0px var(--brand-color);
     }
 
     & button {
+        margin-top: 2rem;
         border-radius: 5rem;
         padding: 1.5rem 3rem;
         background-color: var(--brand-color);
         color: white;
-        transition: scale 350ms;
+        border: none;
+        cursor: pointer;
+        transition: scale 0.3s, box-shadow 0.3s;
 
         &:hover {
             scale: 1.1;
+            -webkit-box-shadow: 0px 0px 26px 0px var(--brand-color);
+            -moz-box-shadow: 0px 0px 26px 0px var(--brand-color);
+            box-shadow: 0px 0px 26px 0px var(--brand-color);
         }
     }
 

@@ -49,11 +49,17 @@ section.hero {
 
       border-radius: 5rem;
 
-      transition: scale 350ms;
+      transition: scale 0.3s;
 
       &.whats {
         padding: 1.5rem 3rem;
         background-color: var(--brand-color);
+
+        &:hover {
+          -webkit-box-shadow: 0px 0px 26px 0px var(--brand-color);
+          -moz-box-shadow: 0px 0px 26px 0px var(--brand-color);
+          box-shadow: 0px 0px 26px 0px var(--brand-color);
+        }
       }
 
       &.play span {
@@ -61,143 +67,146 @@ section.hero {
         border-radius: 50%;
         background-color: white;
         display: flex;
+
+        &:hover {
+          -webkit-box-shadow: 0px 0px 26px 0px var(--brand-color);
+          -moz-box-shadow: 0px 0px 26px 0px var(--brand-color);
+          box-shadow: 0px 0px 26px 0px var(--brand-color);
+        }
       }
+
+
+
 
       &:hover {
         scale: 1.1;
       }
     }
 
-    /* & .shadow {
-      box-shadow:
-        0 2px 5px rgb(153, 109, 255 / .1),
-        0 9px 9px rgb(153, 109, 255 / .09),
-        0 20px 12px rgb(153, 109, 255 / .05),
-        0 36px 15px rgb(153, 109, 255 / .01);
-    } */
-  }
 
-  &>div:nth-child(2) {
-    display: block;
-    width: 100%;
-    max-width: 30.5rem;
-    height: 30.5rem;
 
-    & .content {
+    &>div:nth-child(2) {
+      display: block;
       width: 100%;
-      height: 100%;
-      position: relative;
+      max-width: 30.5rem;
+      height: 30.5rem;
+
+      & .content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      & img {
+        position: absolute;
+        width: 100%;
+      }
+
+
+      & img[src*="vanessa"] {
+        border-radius: 50%;
+        z-index: 1;
+
+        transform: translateX(200%);
+        animation: slideIn 3s ease forwards;
+      }
+
+    }
+  }
+
+
+  @keyframes slideIn {
+    50% {
+      transform: translateX(-20%);
     }
 
-    & img {
-      position: absolute;
-      width: 100%;
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes appear {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes slideUp {
+
+
+    0%,
+    22% {
+      transform: translateY(0);
     }
 
-    
-    & img[src*="vanessa"] {
-      border-radius: 50%;
-      z-index: 1;
 
-      transform: translateX(200%);
-      animation: slideIn 3s ease forwards;
+    23% {
+      transform: translateY(calc(-5rem - 15px));
     }
 
-  }
-}
+    25% {
+      transform: translateY(calc(-5rem + 10px));
+    }
+
+    27% {
+      transform: translateY(calc(-5rem - 5px));
+    }
+
+    29% {
+      transform: translateY(calc(-5rem- 5px));
+    }
 
 
-@keyframes slideIn {
-  50% {
-    transform: translateX(-20%);
-  }
 
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes appear {
-  to {
-    opacity: 1;
-  }
-}
+    33%,
+    55% {
+      transform: translateY(-5rem);
+    }
 
 
-@keyframes slideUp {
+    56% {
+      transform: translateY(calc(-10rem - 15px));
+    }
 
-  
-  0%,
-  22% {
-    transform: translateY(0);
-  }
+    58% {
+      transform: translateY(calc(-10rem + 10px));
+    }
 
+    60% {
+      transform: translateY(calc(-10rem - 5px));
+    }
 
-  23% {
-    transform: translateY(calc(-5rem - 15px));
-  }
-
-  25% {
-    transform: translateY(calc(-5rem + 10px));
-  }
-
-  27% {
-    transform: translateY(calc(-5rem - 5px));
-  }
-
-  29% {
-    transform: translateY(calc(-5rem- 5px));
-  }
+    62% {
+      transform: translateY(calc(-10rem + 5px));
+    }
 
 
- 
-  33%,
-  55% {
-    transform: translateY(-5rem);
-  }
-
-  
-  56% {
-    transform: translateY(calc(-10rem - 15px));
-  }
-
-  58% {
-    transform: translateY(calc(-10rem + 10px));
-  }
-
-  60% {
-    transform: translateY(calc(-10rem - 5px));
-  }
-
-  62% {
-    transform: translateY(calc(-10rem + 5px));
-  }
-
-  
-  66%,
-  88% {
-    transform: translateY(-10rem);
-  }
-
-  
-  89% {
-    transform: translateY(calc(-15rem - 15px));
-  }
-
-  91% {
-    transform: translateY(calc(-15rem + 10px));
-  }
-
-  93% {
-    transform: translateY(calc(-15rem - 5px));
-  }
-
-  95% {
-    transform: translateY(calc(-15rem + 5px));
-  }
+    66%,
+    88% {
+      transform: translateY(-10rem);
+    }
 
 
-  100% {
-    transform: translateY(-15rem);
+    89% {
+      transform: translateY(calc(-15rem - 15px));
+    }
+
+    91% {
+      transform: translateY(calc(-15rem + 10px));
+    }
+
+    93% {
+      transform: translateY(calc(-15rem - 5px));
+    }
+
+    95% {
+      transform: translateY(calc(-15rem + 5px));
+    }
+
+
+    100% {
+      transform: translateY(-15rem);
+    }
   }
 }
