@@ -1,0 +1,13 @@
+.obg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  & a:hover {
+    color: var(--brand-color);
+  }
+}
