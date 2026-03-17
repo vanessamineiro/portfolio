@@ -25,7 +25,12 @@
 
 body {
   color: var(--text);
-  background: var(--background);
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(139, 36, 171, 0.3), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(139, 36, 171, 0.5), transparent 50%),
+    var(--background);
+  background-size: 150% 150%;
+  background-blend-mode: screen;
 }
 
 html,

@@ -1,6 +1,8 @@
 header.top {
   max-width: 80rem;
   width: 100%;
+  --header-height: 5rem;
+  height: var(--header-height);
   padding: 1.25rem 2rem;
   margin-inline: auto;
 
