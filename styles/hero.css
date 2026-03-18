@@ -1,5 +1,6 @@
 section.hero {
-  height: calc(100vh - var(--header-height, 5rem));
+  --header-height: 3rem;
+  height: calc(100vh - var(--header-height, 3rem));
 
   display: flex;
   flex-direction: column;
@@ -133,6 +134,8 @@ section.hero {
 /* Laptops */
 @media (min-width: 1024px) {
   section.hero {
+    --header-height: 5rem;
+    height: calc(100vh - var(--header-height, 5rem));
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;

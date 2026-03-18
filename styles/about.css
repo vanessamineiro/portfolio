@@ -1,17 +1,5 @@
 section.about {
 
-  & header {
-    text-align: center;
-  }
-
-  & header span {
-    font: 500 var(--text-sm)/1.5 var(--ff-base);
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   & img {
     width: 50%;
     border-radius: 2.5rem;
