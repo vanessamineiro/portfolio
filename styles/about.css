@@ -3,15 +3,16 @@ section.about {
   margin-bottom: 5rem;
 
   & img {
-    width: 50%;
+    width: 100%;
     border-radius: 2.5rem;
     object-fit: cover;
-    
+
   }
 
   & .content {
     margin-top: 2rem;
     display: flex;
+    flex-direction: column;
     gap: 2.5rem;
 
     animation: image-appear linear backwards;
@@ -27,11 +28,48 @@ section.about {
   }
 
   & .content p {
-    font: 500 var(--text-sm)/1.5 var(--ff-base);
+    font: 500 0.687rem/1.5 var(--ff-base);
     text-align: justify;
   }
 
 }
+
+@media (min-width: 768px) {
+  section.about {
+    & img {
+      width: 70%;
+
+    }
+
+    & .content {
+      align-items: center;
+    }
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+  section.about {
+    & img {
+      width: 50%;
+    }
+
+    & .content {
+      flex-direction: row;
+    }
+
+    & .content p {
+      font: 500 var(--text-sm)/1.5 var(--ff-base);
+    }
+
+  }
+}
+
+/* Desktops */
+@media (min-width: 1280px) {}
+
+/* Telas grandes */
+@media (min-width: 1536px) {}
 
 
 @keyframes image-appear {
