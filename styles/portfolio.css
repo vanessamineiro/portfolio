@@ -28,7 +28,7 @@ section.portfolio {
     }
 
     &>img {
-      height: 25rem;
+      height: 40rem;
       object-fit: cover;
       transition: scale 500ms;
     }
@@ -37,10 +37,6 @@ section.portfolio {
       &>img {
         scale: 1.1;
       }
-
-      figcaption {
-        transform: translateY(0);
-      }
     }
   }
 
@@ -48,7 +44,7 @@ section.portfolio {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+    height: 75%;
     gap: .5rem;
 
     font: 500 var(--text-sm)/1.5 var(--ff-base);
@@ -57,14 +53,11 @@ section.portfolio {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 1.5rem 2rem;
-
-    transform: translateY(100%);
-    transition: transform 500ms;
+    padding: 1.5rem 1rem;
 
     background: linear-gradient(to top,
         rgb(0 0 0 / 1),
-        rgb(0 0 0 / 0.7));
+        rgb(0 0 0 / 0));
 
     & a {
       font: 500 var(--text-sm)/1.5 var(--ff-base);
@@ -101,8 +94,41 @@ section.portfolio {
 
     }
 
+    & figcaption {
+      height: 100%;
+      gap: .5rem;
+
+      font: 500 var(--text-sm)/1.5 var(--ff-base);
+
+
+      padding: 1.5rem 2rem;
+
+      background: linear-gradient(to top,
+          rgb(0 0 0 / 1),
+          rgb(0 0 0 / 0.7));
+
+      transform: translateY(100%);
+      transition: transform 500ms;
+
+      & span {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
     & figure {
-      
+
+      &>img {
+        height: 25rem;
+
+      }
+
+      &:hover {
+        figcaption {
+          transform: translateY(0);
+        }
+      }
+
       &:nth-child(1) {
         grid-area: A;
       }
