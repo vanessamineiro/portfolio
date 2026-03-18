@@ -1,8 +1,5 @@
 footer {
-  max-width: 80rem;
-  width: 100%;
   padding: 4rem 2rem 2rem;
-  margin-inline: auto;
 
   display: flex;
   align-items: center;
