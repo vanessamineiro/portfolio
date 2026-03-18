@@ -2,24 +2,22 @@ section.hero {
   height: calc(100vh - var(--header-height, 5rem));
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
 
   & p {
-    font: 500 var(--text-md)/1.5 var(--ff-base);
+    font: 500 var(--text-sm)/1.5 var(--ff-base);
     text-transform: uppercase;
   }
 
-  & h1 {
-    margin-top: 2rem;
-    max-width: 40rem;
-  }
 
   & h1 div {
     display: inline-block;
     overflow: hidden;
-    height: 5rem;
+    height: 3rem;
     width: min-content;
     vertical-align: bottom;
   }
@@ -36,8 +34,8 @@ section.hero {
 
   & .buttons {
     display: flex;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    margin-top: 2rem;
 
     & .button {
       display: flex;
@@ -49,7 +47,7 @@ section.hero {
       transition: scale 0.3s;
 
       &.whats {
-        padding: 1.5rem 3rem;
+        padding: 0.5rem 1rem;
         background-color: var(--brand-color);
 
         &:hover {
@@ -60,7 +58,7 @@ section.hero {
       }
 
       &.play span {
-        padding: 1.5rem;
+        padding: 0.5rem;
         border-radius: 50%;
         background-color: white;
         display: flex;
@@ -72,6 +70,11 @@ section.hero {
         }
       }
 
+      & img {
+        width: 1.5rem;
+        height: auto;
+      }
+
 
       &:hover {
         scale: 1.1;
@@ -80,23 +83,34 @@ section.hero {
   }
 
 
-
-
-  &>div:nth-child(2) {
-    display: block;
+  &>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 30.5rem;
-    height: 30.5rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+
+  &>div:nth-child(2),
+  & .mobile-only {
+    width: 100%;
+
+    & .mobile-only {
+      width: 100%;
+    }
 
     & .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100%;
-      position: relative;
     }
 
     & img {
-      position: absolute;
-      width: 100%;
+      width: 70%;
+      object-fit: cover;
     }
 
 
@@ -110,6 +124,82 @@ section.hero {
 
   }
 }
+
+/* Base: mobile (até 480px) */
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Laptops */
+@media (min-width: 1024px) {
+  section.hero {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: left;
+
+    & p {
+      font: 500 var(--text-base)/1.5 var(--ff-base);
+    }
+
+
+    & h1 {
+      margin-top: 2rem;
+      max-width: 40rem;
+    }
+
+    & h1 div {
+      display: inline-block;
+      overflow: hidden;
+      height: 5rem;
+      width: min-content;
+      vertical-align: bottom;
+    }
+
+    &>div:nth-child(1) {
+      align-items: flex-start;
+      gap: unset;
+    }
+
+    &>div:nth-child(2) {
+      display: block;
+      width: 100%;
+      max-width: 30.5rem;
+      height: 30.5rem;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .buttons {
+      gap: 2rem;
+      margin-top: 3rem;
+
+      & .button {
+        align-items: center;
+        gap: .75rem;
+
+        border-radius: 5rem;
+
+        &.whats {
+          padding: 1.5rem 3rem;
+        }
+
+        &.play span {
+          padding: 1.5rem;
+        }
+
+        & img {
+          width: 2rem;
+        }
+
+      }
+    }
+  }
+}
+
+
 
 
 @keyframes appear {

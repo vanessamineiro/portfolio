@@ -35,7 +35,7 @@ body {
 
 html,
 button {
-  font: 500 1rem/1.5 var(--ff-base);
+  font: 500 0.875rem/1.5 var(--ff-base);
 }
 
 h1,
@@ -44,12 +44,12 @@ h2 {
 }
 
 h1 {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   line-height: 1.25;
 }
 
 h2 {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   line-height: 1.2;
 }
 
@@ -63,6 +63,14 @@ a {
   max-width: 30rem;
   padding: 1rem 1rem;
   margin-inline: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: initial;
 }
 
 
@@ -81,6 +89,29 @@ a {
   .container {
     max-width: 64rem;
     padding: 2rem 1.5rem;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  html,
+  button {
+    font: 500 1rem/1.5 var(--ff-base);
+  }
+
+  h1 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: var(--text-lg);
+    line-height: 1.2;
   }
 }
 
