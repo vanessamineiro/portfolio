@@ -1,5 +1,7 @@
 section.portfolio {
 
+  margin-bottom: 5rem;
+
   & img {
     width: 100%;
     height: auto;
@@ -8,13 +10,7 @@ section.portfolio {
   & .content {
     margin-top: 2rem;
     display: grid;
-    grid-template-areas:
-      "A B B"
-      "C C D"
-      "E F F";
     gap: 2.5rem;
-
-
   }
 
   & figure {
@@ -45,30 +41,6 @@ section.portfolio {
       figcaption {
         transform: translateY(0);
       }
-    }
-
-    &:nth-child(1) {
-      grid-area: A;
-    }
-
-    &:nth-child(2) {
-      grid-area: B;
-    }
-
-    &:nth-child(3) {
-      grid-area: C;
-    }
-
-    &:nth-child(4) {
-      grid-area: D;
-    }
-
-    &:nth-child(5) {
-      grid-area: E;
-    }
-
-    &:nth-child(6) {
-      grid-area: F;
     }
   }
 
@@ -110,6 +82,61 @@ section.portfolio {
     width: 2rem;
   }
 }
+
+
+/* Base: mobile (até 480px) */
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Laptops */
+@media (min-width: 1024px) {
+  section.portfolio {
+    & .content {
+      grid-template-areas:
+        "A B B"
+        "C C D"
+        "E F F";
+      gap: 2.5rem;
+
+    }
+
+    & figure {
+      
+      &:nth-child(1) {
+        grid-area: A;
+      }
+
+      &:nth-child(2) {
+        grid-area: B;
+      }
+
+      &:nth-child(3) {
+        grid-area: C;
+      }
+
+      &:nth-child(4) {
+        grid-area: D;
+      }
+
+      &:nth-child(5) {
+        grid-area: E;
+      }
+
+      &:nth-child(6) {
+        grid-area: F;
+      }
+    }
+
+  }
+}
+
+/* Desktops */
+@media (min-width: 1280px) {}
+
+/* Telas grandes */
+@media (min-width: 1536px) {}
+
 
 @keyframes image-appear {
   from {
