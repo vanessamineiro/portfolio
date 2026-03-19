@@ -12,7 +12,7 @@ footer {
 
 
     & img {
-      height: 1.5rem;
+      height: 1rem;
     }
   }
 
@@ -58,6 +58,19 @@ footer {
         transition: scale 200ms;
       }
 
-     }
+    }
+  }
+}
+
+/* Base: mobile (até 480px) */
+
+/* Laptops */
+@media (min-width: 1024px) {
+  footer {
+    & .logo {
+      & img {
+        height: 1.5rem;
+      }
+    }
   }
 }
