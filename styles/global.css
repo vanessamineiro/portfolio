@@ -18,7 +18,7 @@
   --ff-base: "Montserrat", sans-serif;
 
   --text-sm: 0.875rem;
-  --text-base: 1rem;
+  --text-base: 1.5rem;
   --text-lg: 2.5rem;
   --text-xl: 4rem;
 }
@@ -38,7 +38,7 @@ header {
 }
 
 header span {
-  font: 500 0.687rem/1.5 var(--ff-base);
+  font: 500 0.75rem/1.5 var(--ff-base);
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,7 +48,7 @@ header span {
 
 html,
 button {
-  font: 500 0.687rem/1.5 var(--ff-base);
+  font: 500 0.75rem/1.5 var(--ff-base);
 }
 
 h1,
