@@ -38,13 +38,13 @@ section.contact {
     & input,
     & textarea {
         font: 500 var(--text-sm)/1.5 var(--ff-base);
-        color: #E1E1E6;
+        color: var(--background);
         padding: 0.8rem;
         margin-bottom: 2rem;
         border: 1px solid transparent;
         border-radius: 8px;
         transition: border-color 0.3s, box-shadow 0.3s;
-        background-color: #24012f;
+        background-color: #d8d8d8;
     }
 
     & textarea {
