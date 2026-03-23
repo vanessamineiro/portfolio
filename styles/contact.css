@@ -44,7 +44,7 @@ section.contact {
         border: 1px solid transparent;
         border-radius: 8px;
         transition: border-color 0.3s, box-shadow 0.3s;
-        background-color: #3d034e;
+        background-color: #24012f;
     }
 
     & textarea {
