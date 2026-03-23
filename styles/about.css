@@ -28,7 +28,7 @@ section.about {
   }
 
   & .content p {
-    font: 500 0.75rem/1.5 var(--ff-base);
+    font: 500 var(--text-sm)/1.5 var(--ff-base);
     text-align: justify;
   }
 
